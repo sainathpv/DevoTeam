@@ -117,6 +117,16 @@ pipeline {
                 }   
             }
         }
+      
+         stage('Deploy to Kubernetes') {
+            steps {
+                dir('kube_deployment_yaml_files/') {
+                   script {
+                      KubernetesDeploy(config: "rabbit-deployment.yaml", KubeconfigId: "conf")
+                   }
+                }   
+            }
+        }
         
     }
 }
