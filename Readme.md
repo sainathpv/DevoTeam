@@ -10,7 +10,8 @@ citing https://www.digitalocean.com/community/tutorials/how-to-install-and-confi
 3) sudo apt install ansible
 
 4) sudo nano /etc/ansible/hosts  
-Paste:      
+Paste:    
+```
 [servers]  
 <master_alias> ansible_host=<master_ip>  
 <slave1_alias> ansible_host=<slave_ip>  
@@ -18,5 +19,4 @@ Paste:
 
 [servers:vars]  
 ansible_python_interpreter=/usr/bin/python3
-
-
+```
